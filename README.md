@@ -1,13 +1,21 @@
 ## Emonic-Admin 
 
-Emonic-Admin a battery startup for newly emonic v1.0.0
+Emonic-Admin a battery startup for newly emonic v1.0.1
 
-![Alt Text](https://i.postimg.cc/xCmNTN4y/Emonic.jpg)
+[![IMG-20230823-151908.jpg](https://i.postimg.cc/Vsd2Qym0/IMG-20230823-151908.jpg)](https://postimg.cc/dDc5rx7J)
 
 ## Available scripts
 
 ```bash
-emonic-admin startproject -i {projectname}
+emonic-admin create-project {projectname}
+```
+
+```bash
+emonic-admin setup --migrate
+```
+
+```bash
+emonic-admin build -p {root_project_name}
 ```
 
 ```bash
@@ -15,13 +23,11 @@ emonic-admin manage engine
 ```
 
 ```bash
-emonic-admin runserver {projectname}
+emonic-admin gradle --production
 ```
 
-- emonic-admin --> Main module()
-- emonic-admin startproject --> create wsgi project for Emonic()
-- emonic-admin startproject -i {projectname} --> -i denote project cells it set on 100.55 m/s by default
-
-- emonic-admin manage engine --> manage for managing all the static and templating files & engine denote the default engine in settings.py
-
-- emonic-admin runserver {projectname} --> runserver to run the server in debug mode by default just passig the create wsgi folder name
+- emonic-admin createproject {project_name} for building the floor of Emonic app.
+- emonic-admin setup --migration for setting up the migration to root project.
+- emonic-admin build -p {root_project_name} building the root project.
+- emonic-admin manage engine for setting up all the templates and static files.
+- emonic-admin gradle --production for production usage.

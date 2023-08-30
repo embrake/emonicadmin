@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='emonic-admin',
-    version='1.0.0',
+    version='1.0.1',
     description='A battery startup for Emonic web framework',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -25,7 +25,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'emonic-admin = emonicadmin.main:main',
+            'emonic-admin = emonicadmin.admin:main',
         ],
     },
 )
